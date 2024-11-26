@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@/node_modules/aos/dist/aos.css";
 import Navbar from "@/components/master/Navbar";
+import Footer from "@/components/master/Footer";
 
 export const metadata: Metadata = {
     title: "My Portfolio - Adi",
@@ -22,6 +23,7 @@ export default function RootLayout({
             <body className={`antialiased poppins`}>
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );

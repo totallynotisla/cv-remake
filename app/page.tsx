@@ -6,10 +6,16 @@ import { SiLinkedin, SiInstagram, SiGithub } from "@icons-pack/react-simple-icon
 
 import HeroImage from "@/public/assets/hero-image.png";
 import Link from "next/link";
-import { Palette, Paintbrush, Cog } from "lucide-react";
+import { Palette, Paintbrush, Cog, Split } from "lucide-react";
 import Techstacks from "@/components/master/Techstacks";
 
+import { Data } from "./data";
+import splitArray from "@/lib/splitarray";
+import Project from "@/components/master/Project";
+
 export default function Home() {
+    const [data1, data2] = splitArray(Data.slice(0, 4), 2);
+
     return (
         <main>
             <Aos />
@@ -125,7 +131,28 @@ export default function Home() {
             </section>
 
             <section id="projects" className="py-20 bg-white">
-                <div className="container flex gap-4"></div>
+                <div className="container flex flex-col">
+                    <h2 data-aos="fade-up" className="text-3xl font-bold mx-auto">
+                        Featured Projects
+                    </h2>
+
+                    <div className="flex gap-12 w-full mt-24">
+                        <div className="flex flex-col items-end gap-12 w-1/2">
+                            {data1.map((project, index) => (
+                                <Project key={index} data={project} />
+                            ))}
+                        </div>
+                        <div className="flex flex-col mt-12 items-start gap-12 w-1/2">
+                            {data2.map((project, index) => (
+                                <Project key={index} data={project} />
+                            ))}
+                        </div>
+                    </div>
+
+                    <Link href="/projects" className="mx-auto" data-aos="fade-up">
+                        <Button className="mx-auto mt-12">View All Projects</Button>
+                    </Link>
+                </div>
             </section>
         </main>
     );
