@@ -32,6 +32,16 @@ import {
     SiPrismaHex,
     SiExpress,
     SiExpressHex,
+    SiHtml5,
+    SiHtml5Hex,
+    SiCss3,
+    SiCss3Hex,
+    SiTailwindcss,
+    SiTailwindcssHex,
+    SiSass,
+    SiSassHex,
+    SiFfmpeg,
+    SiFfmpegHex,
 } from "@icons-pack/react-simple-icons";
 import TechItem from "./TechItem";
 
@@ -40,6 +50,21 @@ function Techstacks() {
         <>
             <TechItem title="Javascript">
                 <SiJavascript title="" className="size-10 bg-black" color={SiJavascriptHex} />
+            </TechItem>
+            <TechItem title="FFMPEG">
+                <SiFfmpeg title="" className="size-10" color={SiFfmpegHex} />
+            </TechItem>
+            <TechItem title="HTML">
+                <SiHtml5 title="" className="size-10" color={SiHtml5Hex} />
+            </TechItem>
+            <TechItem title="CSS">
+                <SiCss3 title="" className="size-10" color={SiCss3Hex} />
+            </TechItem>
+            <TechItem title="Tailwindcss">
+                <SiTailwindcss title="" className="size-10" color={SiTailwindcssHex} />
+            </TechItem>
+            <TechItem title="Sass">
+                <SiSass title="" className="size-10" color={SiSassHex} />
             </TechItem>
             <TechItem title="Typescript">
                 <SiTypescript title="" className="size-10 bg-white" color={SiTypescriptHex} />
