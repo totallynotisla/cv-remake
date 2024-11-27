@@ -4,14 +4,12 @@ import { Separator } from "../ui/separator";
 
 export default function Footer() {
     return (
-        <footer id="socials" className="rounded-[3rem_3rem_0_0] drop-shadow-xl border">
+        <footer id="socials" className="drop-shadow-xl border">
             <div className="flex flex-col p-4 gap-4">
-                <div className="flex space-between container">
-                    <Brand light />
-                </div>
-                <Separator />
-                <div className="flex items-center container">
-                    <p className="text-sm">Copyright &copy; All rights reserved</p>
+                <div className="flex items-center container text-sm gap-2">
+                    <p>Copyright &copy; All rights reserved</p>
+                    <Separator orientation="vertical" className="w-[1px] h-6" />
+                    <p>mangadi3859</p>
                 </div>
             </div>
         </footer>

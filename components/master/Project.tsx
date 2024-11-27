@@ -13,7 +13,7 @@ type Props = {
 
 export default function ProjectCard({ data, light }: Props) {
     return (
-        <Card className={`w-3/4 flex flex-col min-h-[20rem] group/tw isolate relative overflow-hidden ${!light && "text-white"}`} data-aos="fade-up">
+        <Card className={`w-3/4 phone:w-full flex flex-col min-h-[20rem] group/tw isolate relative overflow-hidden ${!light && "text-white"}`} data-aos="fade-up">
             <Image
                 src={data.thumbnail}
                 className="object-cover group-hover/tw:blur-0 group-hover/tw:brightness-75 scale-105 transition duration-300 brightness-[.15] blur-sm w-full h-full absolute z-[-1] inset-0"

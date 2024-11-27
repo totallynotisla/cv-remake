@@ -3,6 +3,7 @@ import "./globals.css";
 import "@/node_modules/aos/dist/aos.css";
 import Navbar from "@/components/master/Navbar";
 import Footer from "@/components/master/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
     title: "My Portfolio - Adi",
@@ -24,6 +25,7 @@ export default function RootLayout({
                 <Navbar />
                 {children}
                 <Footer />
+                <Toaster />
             </body>
         </html>
     );

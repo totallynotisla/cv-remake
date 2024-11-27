@@ -12,6 +12,7 @@ import Techstacks from "@/components/master/Techstacks";
 import { Data } from "./data";
 import splitArray from "@/lib/splitarray";
 import Project from "@/components/master/Project";
+import FormEmail from "@/components/master/FormEmail";
 
 export default function Home() {
     const [data1, data2] = splitArray(Data.slice(0, 4), 2);
@@ -24,27 +25,30 @@ export default function Home() {
                 <div className="bottom-0 left-0 w-full h-[35%] pointer-events-none bg-gradient-to-t from-white to-transparent absolute z-[-1]"></div>
                 <div className="top-0 left-0 w-full h-[15%] pointer-events-none bg-gradient-to-b from-white to-transparent absolute z-[-1]"></div>
 
-                <div className="container flex items-center justify-between h-full">
-                    <div className="w-1/2 relative">
+                <div className="container flex items-center justify-between phone:justify-start phone:pt-6 gap-12 h-full phone:flex-col-reverse">
+                    <div className="w-1/2 tablet:max-w-[30rem] phone:w-full relative">
                         <Image data-aos="fade-up" src={HeroImage} alt="Hero" className="h-auto" />
 
                         <Card data-aos="fade-up" data-aos-delay="500" className="absolute shadow-lg p-4 right-12 top-1/3 text-white bg-blue-800 border-none rounded-sm">
-                            <div className="font-bold text-2xl">4+ Years</div>
-                            <p>Fullstack Experiences</p>
+                            <div className="font-bold text-2xl tablet:text-base">4+ Years</div>
+                            <p className="text-xs">Fullstack Experiences</p>
                         </Card>
 
                         <Card data-aos="fade-up" data-aos-delay="500" className="absolute shadow-lg p-4 left-1/2 top-[75%] text-white bg-[#2f2f36] border-none rounded-sm">
-                            <div className="font-bold text-2xl">Problem</div>
-                            <p>Solving with algorithm</p>
+                            <div className="font-bold text-2xl tablet:text-base">Problem</div>
+                            <p className="text-xs">Solving with algorithm</p>
                         </Card>
                     </div>
 
-                    <div data-aos="fade-up" className="flex flex-col gap-4 w-1/2">
-                        <h1 className="text-5xl font-bold w-full">
+                    <div data-aos="fade-up" className="flex flex-col gap-4 w-1/2 phone:w-full">
+                        <h1 className="text-5xl tablet:text-4xl font-bold w-full">
                             Hi! I am <span className="text-primary">Adi</span> and
                             <br />I am a <span className="text-primary">Developer</span>
                         </h1>
-                        <p className="text-lg">My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed your expectations.</p>
+                        <p className="text-lg tablet:text-base">
+                            My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed
+                            your expectations.
+                        </p>
                         <Button className="mr-auto">
                             <Link href="#contact">Contact Me</Link>
                         </Button>
@@ -53,14 +57,14 @@ export default function Home() {
             </header>
 
             <section id="about" className="py-20">
-                <div className="container flex gap-[3rem] items-center">
-                    <div className="flex flex-col w-1/2 gap-4">
+                <div className="container flex tablet:flex-col gap-[3rem] items-center">
+                    <div className="flex flex-col w-1/2 gap-4 tablet:w-full">
                         <h2 data-aos="fade-up" className="text-4xl font-bold">
                             About Myself
                         </h2>
                         <p data-aos="fade-up" className="opacity-75">
-                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer science and software engineering
-                            principles, which allows me to design and develop scalable and maintainable software solutions.
+                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer
+                            science and software engineering principles, which allows me to design and develop scalable and maintainable software solutions.
                         </p>
                         <Button data-aos="fade-up" className="mr-auto mt-4">
                             <Link href="https://www.linkedin.com/in/komang-adi-wirawan-b844802b5/">Hire me</Link>
@@ -82,7 +86,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" className="bg-primary/20 p-8 rounded-xl w-1/2 flex flex-col gap-4">
+                    <div data-aos="fade-up" className="bg-primary/20 p-8 rounded-xl w-1/2 tablet:w-full flex flex-col gap-4">
                         <Card className="p-4 flex gap-4 items-center scale-105 border-primary/75 -translate-y-[5%] border-2">
                             <div className="p-4 rounded-full aspect-square bg-primary/75">
                                 <Palette className="text-white size-6" />
@@ -121,7 +125,7 @@ export default function Home() {
                     <h2 data-aos="fade-up" className="text-3xl font-bold mx-auto">
                         Techstacks
                     </h2>
-                    <div data-aos="fade-up" className="flex flex-wrap gap-12 justify-center w-full">
+                    <div data-aos="fade-up" className="flex flex-wrap gap-12 phone:gap-6 justify-center w-full">
                         <Techstacks />
                     </div>
                 </div>
@@ -133,13 +137,13 @@ export default function Home() {
                         Featured Projects
                     </h2>
 
-                    <div className="flex gap-12 w-full mt-24">
-                        <div className="flex flex-col items-end gap-12 w-1/2">
+                    <div className="flex phone:flex-col gap-12 w-full mt-24">
+                        <div className="flex flex-col items-end gap-12 w-1/2 phone:w-full">
                             {data1.map((project, index) => (
                                 <Project key={index} data={project} />
                             ))}
                         </div>
-                        <div className="flex flex-col mt-12 items-start gap-12 w-1/2">
+                        <div className="flex flex-col mt-12 items-start gap-12 w-1/2 phone:w-full phone:mt-0">
                             {data2.map((project, index) => (
                                 <Project key={index} data={project} />
                             ))}
@@ -149,6 +153,15 @@ export default function Home() {
                     <Link href="/projects" className="mx-auto" data-aos="fade-up">
                         <Button className="mx-auto mt-12">View All Projects</Button>
                     </Link>
+                </div>
+            </section>
+
+            <section id="contact" className="py-20 bg-primary/5">
+                <div className="container flex flex-col items-center gap-6">
+                    <h2 data-aos="fade-up" className="text-2xl font-bold mr-auto">
+                        Contact Me
+                    </h2>
+                    <FormEmail />
                 </div>
             </section>
         </main>
