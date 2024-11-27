@@ -40,14 +40,11 @@ export default function Home() {
                     </div>
 
                     <div data-aos="fade-up" className="flex flex-col gap-4 w-1/2">
-                        <h1 className="text-6xl font-bold w-full">
+                        <h1 className="text-5xl font-bold w-full">
                             Hi! I am <span className="text-primary">Adi</span> and
                             <br />I am a <span className="text-primary">Developer</span>
                         </h1>
-                        <p className="text-lg">
-                            My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed
-                            your expectations.
-                        </p>
+                        <p className="text-lg">My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed your expectations.</p>
                         <Button className="mr-auto">
                             <Link href="#contact">Contact Me</Link>
                         </Button>
@@ -62,8 +59,8 @@ export default function Home() {
                             About Myself
                         </h2>
                         <p data-aos="fade-up" className="opacity-75">
-                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer
-                            science and software engineering principles, which allows me to design and develop scalable and maintainable software solutions.
+                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer science and software engineering
+                            principles, which allows me to design and develop scalable and maintainable software solutions.
                         </p>
                         <Button data-aos="fade-up" className="mr-auto mt-4">
                             <Link href="https://www.linkedin.com/in/komang-adi-wirawan-b844802b5/">Hire me</Link>
