@@ -41,9 +41,3 @@ export async function POST(req: Request) {
         return new Response(JSON.stringify({ status: "FAILED", message: err.toString() }), { status: 500 });
     }
 }
-
-export default function handler(req: Request) {
-    if (req.method != "POST") {
-        return new Response(JSON.stringify({ message: "Method not allowed" }), { status: 405 });
-    }
-}
