@@ -8,9 +8,9 @@ export async function POST(req: Request) {
         }
 
         // Send data using discord webhook
-        const webhook = "https://discord.com/api/webhooks/1311378139603009657/N_UMFaN0Kfkc2yphhZWjzFnIY-W1T_P83EWlILynxSYXl_tgffTSxhlBJsPPCFfCOCe-";
+        const webhook = process.env.WEBHOOK;
 
-        await fetch(webhook, {
+        await fetch(webhook || "", {
             headers: {
                 "Content-Type": "application/json",
             },
