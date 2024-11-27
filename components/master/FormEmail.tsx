@@ -1,5 +1,4 @@
 "use client";
-import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -8,6 +7,8 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "../ui/card";
+import { useToast } from "@/hooks/use-toast";
+// import { load as loadCaptcha } from "recaptcha-v3";
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -16,6 +17,8 @@ const formSchema = z.object({
 });
 
 export default function EmailForm() {
+    const { toast } = useToast();
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -25,17 +28,19 @@ export default function EmailForm() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         try {
             console.log(values);
-            toast(
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-                    <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-                </pre>
-            );
+            let res = await fetch("/api/send", { body: JSON.stringify(values), method: "POST" });
+            let data = await res.json();
+
+            if (data.status == "OK") {
+                toast({ title: "Success", description: "Message sent successfully" });
+                form.reset();
+            }
         } catch (error) {
             console.error("Form submission error", error);
-            toast.error("Failed to submit the form. Please try again.");
+            toast({ title: "Error", description: "Failed to submit the form. Please try again." });
         }
     }
 
