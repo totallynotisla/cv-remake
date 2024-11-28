@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`antialiased poppins`}>
+            <body className={`antialiased poppins min-h-dvh flex flex-col`}>
+                <Toaster />
                 <Navbar />
                 {children}
                 <Footer />
-                <Toaster />
             </body>
         </html>
     );

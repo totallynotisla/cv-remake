@@ -30,7 +30,7 @@ export default function Home() {
                         <Image data-aos="fade-up" src={HeroImage} alt="Hero" className="h-auto" />
 
                         <Card data-aos="fade-up" data-aos-delay="500" className="absolute shadow-lg p-4 right-12 top-1/3 text-white bg-blue-800 border-none rounded-sm">
-                            <div className="font-bold text-2xl tablet:text-base">4+ Years</div>
+                            <div className="font-bold text-2xl tablet:text-base">2+ Years</div>
                             <p className="text-xs">Fullstack Experiences</p>
                         </Card>
 

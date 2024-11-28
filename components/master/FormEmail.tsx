@@ -37,6 +37,8 @@ export default function EmailForm() {
             if (data.status == "OK") {
                 toast({ title: "Success", description: "Message sent successfully" });
                 form.reset();
+            } else {
+                toast({ title: "Error", description: "Something went wrong" });
             }
         } catch (error) {
             console.error("Form submission error", error);

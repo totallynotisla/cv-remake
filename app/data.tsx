@@ -67,7 +67,7 @@ export const Data: ProjectType[] = [
         name: "Gerawana URL Shortener",
         description: "Gerawana URL Shortener is a simple and efficient tool to shorten long URLs, built with NextJS and TailwindCSS.",
         longDescription:
-            "Gerawana URL Shortener is a simple and efficient tool to shorten long URLs. It is built using NextJS and TailwindCSS, providing a modern and responsive user interface. The project includes features such as custom URL aliases, click tracking. It is designed to be easy to use and deploy, making it a great solution for anyone looking to manage and share links more effectively.",
+            "Gerawana URL Shortener is a simple and efficient tool to shorten long URLs. It is built using NextJS and TailwindCSS, providing a modern and responsive user interface. The project includes features such as custom URL aliases and click tracking. It is designed to be easy to use and deploy, making it a great solution for anyone looking to manage and share links more effectively.",
         image: "/assets/portfolio/gerawana/gerawana-url.png",
         thumbnail: "/assets/portfolio/gerawana/gerawana-url.png",
         gallery: ["/assets/portfolio/gerawana/gerawana-url.png"],
@@ -75,23 +75,23 @@ export const Data: ProjectType[] = [
         Techstacks: [
             {
                 name: "NextJS",
-                icon: <SiNextdotjs title="" className="size-10" color={SiNextdotjsHex} />,
+                icon: <SiNextdotjs title="" className="size-6" color={SiNextdotjsHex} />,
             },
             {
                 name: "TailwindCSS",
-                icon: <SiTailwindcss title="" className="size-10" color={SiTailwindcssHex} />,
+                icon: <SiTailwindcss title="" className="size-6" color={SiTailwindcssHex} />,
             },
             {
                 name: "CSS",
-                icon: <SiCss3 title="" className="size-10" color={SiCss3Hex} />,
+                icon: <SiCss3 title="" className="size-6" color={SiCss3Hex} />,
             },
             {
                 name: "NodeJS",
-                icon: <SiNodedotjs title="" className="size-10" color={SiNodedotjsHex} />,
+                icon: <SiNodedotjs title="" className="size-6" color={SiNodedotjsHex} />,
             },
             {
                 name: "TypeScript",
-                icon: <SiTypescript title="" className="size-10" color={SiTypescriptHex} />,
+                icon: <SiTypescript title="" className="size-6" color={SiTypescriptHex} />,
             },
         ],
         href: "https://github.com/mangadi3859/gerawana-urlshort",
@@ -110,31 +110,31 @@ export const Data: ProjectType[] = [
         Techstacks: [
             {
                 name: "NodeJS",
-                icon: <SiNodedotjs title="" className="size-10" color={SiNodedotjsHex} />,
+                icon: <SiNodedotjs title="" className="size-6" color={SiNodedotjsHex} />,
             },
             {
                 name: "TypeScript",
-                icon: <SiTypescript title="" className="size-10" color={SiTypescriptHex} />,
+                icon: <SiTypescript title="" className="size-6" color={SiTypescriptHex} />,
             },
             {
                 name: "JavaScript",
-                icon: <SiJavascript title="" className="size-10" color={SiJavascriptHex} />,
+                icon: <SiJavascript title="" className="size-6" color={SiJavascriptHex} />,
             },
             {
                 name: "CSS",
-                icon: <SiCss3 title="" className="size-10" color={SiCss3Hex} />,
+                icon: <SiCss3 title="" className="size-6" color={SiCss3Hex} />,
             },
             {
                 name: "HTML",
-                icon: <SiHtml5 title="" className="size-10" color={SiHtml5Hex} />,
+                icon: <SiHtml5 title="" className="size-6" color={SiHtml5Hex} />,
             },
             {
                 name: "Express",
-                icon: <SiExpress title="" className="size-10" color={SiExpressHex} />,
+                icon: <SiExpress title="" className="size-6" color={SiExpressHex} />,
             },
             {
                 name: "FFmpeg",
-                icon: <SiFfmpeg title="" className="size-10" color={SiFfmpegHex} />,
+                icon: <SiFfmpeg title="" className="size-6" color={SiFfmpegHex} />,
             },
         ],
         href: "https://github.com/mangadi3859/spriteweb",
@@ -153,19 +153,65 @@ export const Data: ProjectType[] = [
         Techstacks: [
             {
                 name: "Chrome Web Store",
-                icon: <SiChromewebstore title="" className="size-10" color={SiChromewebstoreHex} />,
+                icon: <SiChromewebstore title="" className="size-6" color={SiChromewebstoreHex} />,
             },
             {
                 name: "TypeScript",
-                icon: <SiTypescript title="" className="size-10" color={SiTypescriptHex} />,
+                icon: <SiTypescript title="" className="size-6" color={SiTypescriptHex} />,
             },
             {
                 name: "Webpack",
-                icon: <SiWebpack title="" className="size-10" color={SiWebpackHex} />,
+                icon: <SiWebpack title="" className="size-6" color={SiWebpackHex} />,
             },
         ],
         href: "https://github.com/mangadi3859/youtube-block-bypass-extension",
         detailHref: "ytblock",
+    },
+
+    {
+        name: "Oregairu Zoku PC Port",
+        description: "Oregairu visual novel port to PC, built with Ren'Py",
+        longDescription:
+            "Oregairu Zoku PC Port is a project that ports the Oregairu visual novel to PC using Ren'Py. It aims to provide a seamless experience for fans of the series, allowing them to enjoy the visual novel on their computers.",
+        image: "/assets/portfolio/zoku/image.png",
+        thumbnail: "/assets/portfolio/zoku/image.png",
+        gallery: ["/assets/portfolio/zoku/image.png"],
+        status: "maintained",
+        Techstacks: [
+            {
+                name: "Ren'Py",
+                icon: <SiRenpy title="" className="size-6" color={SiRenpyHex} />,
+            },
+            {
+                name: "Python",
+                icon: <SiPython title="" className="size-6" color={SiPythonHex} />,
+            },
+        ],
+        href: "PRIVATE",
+        detailHref: "zoku",
+    },
+
+    {
+        name: "Oregairu Kan PC Port",
+        description: "Oregairu visual novel port to PC, built with Ren'Py",
+        longDescription:
+            "Oregairu Kan PC Port is a project that ports the Oregairu visual novel to PC using Ren'Py. It aims to provide a seamless experience for fans of the series, allowing them to enjoy the visual novel on their computers.",
+        image: "/assets/portfolio/kan/image.jpg",
+        thumbnail: "/assets/portfolio/kan/image.jpg",
+        gallery: ["/assets/portfolio/kan/image.jpg"],
+        status: "on-going",
+        Techstacks: [
+            {
+                name: "Ren'Py",
+                icon: <SiRenpy title="" className="size-6" color={SiRenpyHex} />,
+            },
+            {
+                name: "Python",
+                icon: <SiPython title="" className="size-6" color={SiPythonHex} />,
+            },
+        ],
+        href: "PRIVATE",
+        detailHref: "kan",
     },
 
     {
@@ -180,18 +226,53 @@ export const Data: ProjectType[] = [
         Techstacks: [
             {
                 name: "Chrome Web Store",
-                icon: <SiChromewebstore title="" className="size-10" color={SiChromewebstoreHex} />,
+                icon: <SiChromewebstore title="" className="size-6" color={SiChromewebstoreHex} />,
             },
             {
                 name: "TypeScript",
-                icon: <SiTypescript title="" className="size-10" color={SiTypescriptHex} />,
+                icon: <SiTypescript title="" className="size-6" color={SiTypescriptHex} />,
             },
             {
                 name: "Webpack",
-                icon: <SiWebpack title="" className="size-10" color={SiWebpackHex} />,
+                icon: <SiWebpack title="" className="size-6" color={SiWebpackHex} />,
             },
         ],
         href: "https://github.com/mangadi3859/nhentai-downloader",
         detailHref: "doujinpdf",
+    },
+
+    {
+        name: "LundryIna",
+        description: "A website to manage laundry services, built with Native PHP and MySQL",
+        longDescription:
+            "LundryIna is a web application designed to manage laundry services efficiently. Built with native PHP and MySQL, it provides a comprehensive solution for tracking orders, managing customer information, and handling payments. The application features a user-friendly interface that allows staff to easily input and retrieve data, ensuring smooth operation of laundry services. LundryIna aims to streamline the workflow of laundry businesses, improving overall productivity and customer satisfaction.",
+        image: "/assets/portfolio/uk/image.png",
+        thumbnail: "/assets/portfolio/uk/image.png",
+        gallery: ["/assets/portfolio/uk/image.png"],
+        status: "maintained",
+        Techstacks: [
+            {
+                name: "HTML",
+                icon: <SiHtml5 title="" className="size-6" color={SiHtml5Hex} />,
+            },
+            {
+                name: "JavaScript",
+                icon: <SiJavascript title="" className="size-6" color={SiJavascriptHex} />,
+            },
+            {
+                name: "CSS",
+                icon: <SiCss3 title="" className="size-6" color={SiCss3Hex} />,
+            },
+            {
+                name: "PHP",
+                icon: <SiPhp title="" className="size-6" color={SiPhpHex} />,
+            },
+            {
+                name: "MySQL",
+                icon: <SiMysql title="" className="size-6" color={SiMysqlHex} />,
+            },
+        ],
+        href: "https://github.com/mangadi3859/laundry-uk",
+        detailHref: "lundryina",
     },
 ];
