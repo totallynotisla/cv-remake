@@ -32,7 +32,7 @@ const ProjectDetail = ({ params }: { params: { detail: string } }) => {
                         </div>
                         <div className="flex flex-col h-min gap-1">
                             <Badge className="bg-black text-white mr-auto rounded-full">Techstacks</Badge>
-                            <span className="text-sm text-black/75 uppercase gap-2 flex">
+                            <span className="text-sm text-black/75 uppercase gap-2 flex flex-wrap">
                                 {data.Techstacks.map((e) => (
                                     <TechItem key={e.name} title={e.name}>
                                         {e.icon}
