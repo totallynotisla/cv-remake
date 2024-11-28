@@ -24,7 +24,7 @@ const ProjectDetail = ({ params }: { params: { detail: string } }) => {
                 </div>
 
                 <div className="flex gap-4 phone:flex-col">
-                    <Image className="h-auto w-[20rem] object-cover" alt="image" src={data.thumbnail} width={500} height={500}></Image>
+                    <Image className="h-auto phone:w-full w-[20rem] object-cover" alt="image" src={data.thumbnail} width={500} height={500}></Image>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="flex flex-col h-min gap-1">
                             <Badge className="bg-black text-white mr-auto rounded-full">Status</Badge>
@@ -43,11 +43,15 @@ const ProjectDetail = ({ params }: { params: { detail: string } }) => {
                         <div className="flex flex-col h-min gap-1">
                             <Badge className="bg-black text-white mr-auto rounded-full">Source</Badge>
                             <span className="text-sm text-black/75 uppercase">
-                                <Link className="p-0" href={data.href}>
-                                    <Button variant={"secondary"} className="px-4 bg-slate-300 py-0 text-sm">
-                                        Open
-                                    </Button>
-                                </Link>
+                                {data.href == "PRIVATE" ? (
+                                    <Badge className="bg-slate-300 text-black mr-auto rounded-full">PRIVATE</Badge>
+                                ) : (
+                                    <Link className="p-0" href={data.href}>
+                                        <Button variant={"secondary"} className="px-4 bg-slate-300 py-0 text-sm">
+                                            Open
+                                        </Button>
+                                    </Link>
+                                )}
                             </span>
                         </div>
                     </div>
