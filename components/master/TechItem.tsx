@@ -1,13 +1,12 @@
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
-import Link from "next/link";
-import React from "react";
+import React, { ReactNode } from "react";
 import { Card } from "../ui/card";
 import { cn } from "@/lib/utils";
 
 type Props = {
     title: string;
     className?: string;
-    children: React.ReactNode;
+    children: ReactNode;
 };
 
 function TechItem({ children, title, className }: Props) {

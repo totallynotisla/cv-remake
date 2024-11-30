@@ -1,5 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next";
-
 export async function POST(req: Request) {
     try {
         const { subject, email, message }: Partial<{ subject: string; email: string; message: string }> = await req.json();
@@ -37,8 +35,7 @@ export async function POST(req: Request) {
         });
 
         return new Response(JSON.stringify({ status: "OK", message: "Message sent successfully" }), { status: 200 });
-    } catch (err: any) {
-        return new Response(JSON.stringify({ status: "FAILED", message: err.toString() }), { status: 500 });
+    } catch (err) {
+        if (err instanceof Error) return new Response(JSON.stringify({ status: "FAILED", message: err.toString() }), { status: 500 });
     }
 }
-``;

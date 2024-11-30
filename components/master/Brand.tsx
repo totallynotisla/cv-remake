@@ -1,8 +1,5 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-
-import BrandImg from "@/public/assets/logo-cv-dark.svg";
 import { cn } from "@/lib/utils";
 
 type Props = {

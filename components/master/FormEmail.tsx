@@ -31,8 +31,8 @@ export default function EmailForm() {
     async function onSubmit(values: z.infer<typeof formSchema>) {
         try {
             console.log(values);
-            let res = await fetch("/api/send", { body: JSON.stringify(values), method: "POST" });
-            let data = await res.json();
+            const res = await fetch("/api/send", { body: JSON.stringify(values), method: "POST" });
+            const data = await res.json();
 
             if (data.status == "OK") {
                 toast({ title: "Success", description: "Message sent successfully" });

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Aos from "@/components/master/Aos";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { SiLinkedin, SiInstagram, SiGithub } from "@icons-pack/react-simple-icons";
 
 import HeroImage from "@/public/assets/hero-image.png";
 import Link from "next/link";
-import { Palette, Paintbrush, Cog, Split } from "lucide-react";
+import { Palette, Paintbrush, Cog } from "lucide-react";
 import Techstacks from "@/components/master/Techstacks";
 
 import { Data } from "./data";
@@ -46,8 +46,7 @@ export default function Home() {
                             <br />I am a <span className="text-primary">Developer</span>
                         </h1>
                         <p className="text-lg tablet:text-base">
-                            My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed
-                            your expectations.
+                            My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed your expectations.
                         </p>
                         <Button className="mr-auto">
                             <Link href="#contact">Contact Me</Link>
@@ -63,8 +62,8 @@ export default function Home() {
                             About Myself
                         </h2>
                         <p data-aos="fade-up" className="opacity-75">
-                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer
-                            science and software engineering principles, which allows me to design and develop scalable and maintainable software solutions.
+                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer science and software engineering
+                            principles, which allows me to design and develop scalable and maintainable software solutions.
                         </p>
                         <Button data-aos="fade-up" className="mr-auto mt-4">
                             <Link href="https://www.linkedin.com/in/komang-adi-wirawan-b844802b5/">Hire me</Link>

@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="flex justify-between phone:flex-col text-sm gap-2">
                     <div className="flex flex-col gap-2 max-w-[16rem]">
                         <Brand light className="h-14 w-14 p-1 aspect-square rounded-full bg-black" />
-                        <p className="text-black/65">Become the world's developer, inspire innovation, and create solutions that make a difference.</p>
+                        <p className="text-black/65">Become the world&apos;s developer, inspire innovation, and create solutions that make a difference.</p>
                     </div>
 
                     <div className="flex phone:justify-normal gap-12 justify-between">

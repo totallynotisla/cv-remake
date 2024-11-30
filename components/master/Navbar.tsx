@@ -1,20 +1,11 @@
 "use client";
 
 import React from "react";
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import Brand from "./Brand";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Sheet, SheetFooter, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import { Sheet, SheetFooter, SheetContent } from "@/components/ui/sheet";
 import { Logs } from "lucide-react";
 import { Separator } from "../ui/separator";
 
