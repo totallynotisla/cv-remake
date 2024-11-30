@@ -30,7 +30,6 @@ export default function EmailForm() {
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
         try {
-            console.log(values);
             const res = await fetch("/api/send", { body: JSON.stringify(values), method: "POST" });
             const data = await res.json();
 
@@ -39,10 +38,11 @@ export default function EmailForm() {
                 form.reset();
             } else {
                 toast({ title: "Error", description: "Something went wrong" });
+                console.log(data);
             }
         } catch (error) {
-            console.error("Form submission error", error);
             toast({ title: "Error", description: "Failed to submit the form. Please try again." });
+            console.log("Form submission error", error);
         }
     }
 

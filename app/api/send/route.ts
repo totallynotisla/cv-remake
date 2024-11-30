@@ -7,12 +7,12 @@ export async function POST(req: Request) {
 
         // Send data using discord webhook
         const webhook = process.env.WEBHOOK;
+        console.log(webhook);
 
         await fetch(webhook || "", {
             headers: {
                 "Content-Type": "application/json",
             },
-            referrer: "https://discohook.org/",
             referrerPolicy: "strict-origin",
             body: JSON.stringify({
                 content: null,
@@ -36,6 +36,7 @@ export async function POST(req: Request) {
 
         return new Response(JSON.stringify({ status: "OK", message: "Message sent successfully" }), { status: 200 });
     } catch (err) {
+        console.log(err);
         if (err instanceof Error) return new Response(JSON.stringify({ status: "FAILED", message: err.toString() }), { status: 500 });
     }
 }
