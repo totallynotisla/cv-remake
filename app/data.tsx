@@ -94,7 +94,7 @@ export const Data: ProjectType[] = [
                 icon: <SiTypescript title="" className="size-6" color={SiTypescriptHex} />,
             },
         ],
-        href: "https://github.com/mangadi3859/gerawana-urlshort",
+        href: "https://github.com/totallynotisla/gerawana-urlshort",
         detailHref: "gerawana",
     },
 
@@ -137,7 +137,7 @@ export const Data: ProjectType[] = [
                 icon: <SiFfmpeg title="" className="size-6" color={SiFfmpegHex} />,
             },
         ],
-        href: "https://github.com/mangadi3859/spriteweb",
+        href: "https://github.com/totallynotisla/spriteweb",
         detailHref: "spriteweb",
     },
 
@@ -164,7 +164,7 @@ export const Data: ProjectType[] = [
                 icon: <SiWebpack title="" className="size-6" color={SiWebpackHex} />,
             },
         ],
-        href: "https://github.com/mangadi3859/youtube-block-bypass-extension",
+        href: "https://github.com/totallynotisla/youtube-block-bypass-extension",
         detailHref: "ytblock",
     },
 
@@ -237,7 +237,7 @@ export const Data: ProjectType[] = [
                 icon: <SiWebpack title="" className="size-6" color={SiWebpackHex} />,
             },
         ],
-        href: "https://github.com/mangadi3859/nhentai-downloader",
+        href: "https://github.com/totallynotisla/nhentai-downloader",
         detailHref: "doujinpdf",
     },
 
@@ -272,7 +272,7 @@ export const Data: ProjectType[] = [
                 icon: <SiMysql title="" className="size-6" color={SiMysqlHex} />,
             },
         ],
-        href: "https://github.com/mangadi3859/laundry-uk",
+        href: "https://github.com/totallynotisla/laundry-uk",
         detailHref: "lundryina",
     },
 ];

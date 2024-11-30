@@ -35,7 +35,7 @@ export default function Footer() {
                             <Link target="_blank" className="text-sm text-black/65 hover:underline" href="https://www.linkedin.com/in/komang-adi-wirawan-b844802b5/">
                                 Linkedin
                             </Link>
-                            <Link target="_blank" className="text-sm text-black/65 hover:underline" href="https://github.com/mangadi3859">
+                            <Link target="_blank" className="text-sm text-black/65 hover:underline" href="https://github.com/totallynotisla">
                                 Github
                             </Link>
                             <Link target="_blank" className="text-sm text-black/65 hover:underline" href="https://www.instagram.com/mangadi3859/">
