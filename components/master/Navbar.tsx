@@ -56,30 +56,32 @@ export default function Navbar() {
             <Sheet onOpenChange={setIsOpen} open={isOpen} defaultOpen={false}>
                 <SheetContent side={"right"} className="z-[101]">
                     <div className="flex flex-col h-full pt-6 gap-4">
-                        <Button variant="default" className="bg-black rounded-0 text-white hover:bg-gray-800 transition">
-                            <Link className="" href="/#about">
+                        <Link className="block w-full" href="/#about">
+                            <Button variant="default" className="bg-black rounded-0 w-full text-white hover:bg-gray-800 transition">
                                 About Me
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
 
-                        <Button variant="default" className="bg-black rounded-0 text-white hover:bg-gray-800 transition">
-                            <Link className="" href="/#projects">
+                        <Link className="block w-full" href="/#projects">
+                            <Button variant="default" className="bg-black rounded-0 w-full text-white hover:bg-gray-800 transition">
                                 Projects
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
 
-                        <Button variant="default" className="bg-black rounded-0 text-white hover:bg-gray-800 transition">
-                            <Link className="" href="/#socials">
+                        <Link className="block w-full" href="/#socials">
+                            <Button variant="default" className="bg-black rounded-0 w-full text-white hover:bg-gray-800 transition">
                                 Socials
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
 
                         <Separator className="mt-auto" />
 
                         <SheetFooter>
-                            <Button variant="default" className="bg-black rounded-0 text-white hover:bg-gray-800 transition">
-                                <Link href="/#contact">Contact Me</Link>
-                            </Button>
+                            <Link href="/#contact" className="block w-full">
+                                <Button variant="default" className="bg-black rounded-0 w-full text-white hover:bg-gray-800 transition">
+                                    Contact Me
+                                </Button>
+                            </Link>
                         </SheetFooter>
                     </div>
                 </SheetContent>

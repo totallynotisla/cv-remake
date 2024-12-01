@@ -31,7 +31,7 @@ export default function Footer() {
                         </div>
 
                         <div className="flex flex-col gap-2">
-                            <h3 className="font-bold">Social</h3>
+                            <h3 className="font-bold">Socials</h3>
                             <Link target="_blank" className="text-sm text-black/65 hover:underline" href="https://www.linkedin.com/in/komang-adi-wirawan-b844802b5/">
                                 Linkedin
                             </Link>
