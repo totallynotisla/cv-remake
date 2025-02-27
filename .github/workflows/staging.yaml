@@ -3,7 +3,7 @@ name: Staging
 on:
     push:
         tags:
-            - prod-*
+            - stg-*
     workflow_dispatch:
 
 env:
