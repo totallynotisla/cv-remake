@@ -37,7 +37,7 @@ jobs:
                   username: ${{ secrets.STAGING_SSH_USERNAME }}
                   port: ${{ secrets.STAGING_SSH_PORT }}
                   key_path: ${{ env.SSH_KEY_FILE_NAME }}
-                  source: "./ecosystem.staging.config.js,.next,node_modules,package.json"
+                  source: "./ecosystem.staging.config.js,.next,node_modules,package.json,public"
                   target: "/home/${{ secrets.STAGING_SSH_USERNAME }}/${{ env.APP_DIR }}"
 
             - name: Executing remote command using ssh

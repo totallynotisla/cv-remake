@@ -37,7 +37,7 @@ jobs:
                   username: ${{ secrets.PROD_SSH_USERNAME }}
                   port: ${{ secrets.PROD_SSH_PORT }}
                   key_path: ${{ env.SSH_KEY_FILE_NAME }}
-                  source: "./ecosystem.config.js,.next,node_modules,package.json"
+                  source: "./ecosystem.config.js,.next,node_modules,package.json,public"
                   target: "/home/${{ secrets.PROD_SSH_USERNAME }}/${{ env.APP_DIR }}"
 
             - name: Executing remote command using ssh
