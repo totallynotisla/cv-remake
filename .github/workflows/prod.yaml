@@ -1,4 +1,4 @@
-name: Staging
+name: Production
 
 on:
     push:
@@ -8,7 +8,7 @@ on:
 
 env:
     SSH_KEY_FILE_NAME: portfolio.pem
-    APP_DIR: staging/portfolio
+    APP_DIR: prod/portfolio
 
 jobs:
     build_and_deploy:
