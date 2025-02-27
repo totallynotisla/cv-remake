@@ -1,10 +1,10 @@
 module.exports = {
     apps: [
         {
-            name: "portfolio@prod",
+            name: "portfolio@staging",
             script: "next start",
             env: {
-                PORT: 3001,
+                PORT: 3002,
             },
         },
     ],
