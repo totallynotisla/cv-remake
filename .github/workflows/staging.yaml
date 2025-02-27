@@ -7,7 +7,7 @@ on:
     workflow_dispatch:
 
 env:
-    SSH_KEY_FILE_NAME: portfolio.pem
+    SSH_KEY_FILE_NAME: github_ci_cd.pem
     APP_DIR: staging/portfolio
 
 jobs:
