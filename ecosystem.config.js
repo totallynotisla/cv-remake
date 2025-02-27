@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: "portfolio@prod",
-            script: "next start",
+            script: "npx next start",
             env: {
                 PORT: 3001,
             },
