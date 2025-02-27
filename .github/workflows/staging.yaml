@@ -1,0 +1,56 @@
+name: Staging
+
+on:
+    push:
+        tags:
+            - prod-*
+    workflow_dispatch:
+
+env:
+    SSH_KEY_FILE_NAME: fasttekno.pem
+    APP_DIR: staging/portfolio
+
+jobs:
+    build_and_deploy:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "20"
+            - name: Install dependencies
+              run: npm install
+            - name: Run build
+              run: npm run build
+            - name: Store SSH key
+              run: echo "${{ secrets.STAGING_SSH_KEY_CONTENT }}" > ${{ env.SSH_KEY_FILE_NAME }}
+            - name: Change SSH key permission
+              run: chmod 444 ${{ env.SSH_KEY_FILE_NAME }}
+
+            - name: Copy file to server
+              uses: appleboy/scp-action@master
+              with:
+                  host: ${{ secrets.STAGING_SERVER_IP }}
+                  username: ${{ secrets.STAGING_SSH_USERNAME }}
+                  port: ${{ secrets.STAGING_SSH_PORT }}
+                  key_path: ${{ env.SSH_KEY_FILE_NAME }}
+                  source: "./ecosystem.staging.config.js,.next,node_modules,package.json"
+                  target: "/home/${{ secrets.STAGING_SSH_USERNAME }}/${{ env.APP_DIR }}"
+            - name: Executing remote command using ssh
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{ secrets.STAGING_SERVER_IP }}
+                  username: ${{ secrets.STAGING_SSH_USERNAME }}
+                  key_path: ${{ env.SSH_KEY_FILE_NAME }}
+                  port: ${{ secrets.STAGING_SSH_PORT }}
+                  script: |
+                      export NVM_DIR=~/.nvm
+                      source ~/.nvm/nvm.sh
+                      source ~/.profile
+                      cd /home/${{ secrets.STAGING_SSH_USERNAME }}/${{ env.APP_DIR }}
+                      echo "${{ secrets.STAGING_ENV_VARS }}" > .env
+                      pm2 reload ecosystem.staging.config.js
+                      pm2 save
