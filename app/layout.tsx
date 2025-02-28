@@ -18,21 +18,42 @@ export const metadata: Metadata = {
     openGraph: {
         emails: "wkomangadi44@gmail.com",
         title: "totallynotisla",
-        type: "profile",
+        type: "website",
         siteName: "TotallyNotIsla",
         description: "Welcome to Adi's portfolio. Explore my projects, skills, and experience.",
         url: "https://www.totallynotisla.my.id/",
         images: [
             {
                 url: "https://www.totallynotisla.my.id/assets/og-cv",
-                width: 512,
-                height: 530,
+                width: 128,
+                height: 133,
                 alt: "Logo light",
             },
             {
                 url: "https://www.totallynotisla.my.id/assets/og-cv-dark",
-                width: 512,
-                height: 530,
+                width: 128,
+                height: 133,
+                alt: "Logo dark",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "totallynotisla",
+        description: "Welcome to Adi's portfolio. Explore my projects, skills, and experience.",
+        site: "@TotallyNotIsla",
+        creator: "@totallynotisla",
+        images: [
+            {
+                url: "https://www.totallynotisla.my.id/assets/og-cv",
+                width: 128,
+                height: 133,
+                alt: "Logo light",
+            },
+            {
+                url: "https://www.totallynotisla.my.id/assets/og-cv-dark",
+                width: 128,
+                height: 133,
                 alt: "Logo dark",
             },
         ],
