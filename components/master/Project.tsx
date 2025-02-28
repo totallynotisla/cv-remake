@@ -20,6 +20,7 @@ export default function ProjectCard({ data, light }: Props) {
                 width={480}
                 height={480}
                 alt={data.name}
+                title={data.name}
             />
             <CardHeader className="group-hover/tw:-translate-y-full transition duration-300">
                 <CardTitle>{data.name}</CardTitle>

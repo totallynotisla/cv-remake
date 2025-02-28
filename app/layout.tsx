@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "https://www.totallynotisla.my.id/",
         images: [
             {
-                url: "https://www.totallynotisla.my.id/assets/og-cv",
+                url: "https://www.totallynotisla.my.id/assets/og-cv.png",
                 width: 128,
                 height: 133,
                 alt: "Logo light",
             },
             {
-                url: "https://www.totallynotisla.my.id/assets/og-cv-dark",
+                url: "https://www.totallynotisla.my.id/assets/og-cv-dark.png",
                 width: 128,
                 height: 133,
                 alt: "Logo dark",
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
         creator: "@totallynotisla",
         images: [
             {
-                url: "https://www.totallynotisla.my.id/assets/og-cv",
+                url: "https://www.totallynotisla.my.id/assets/og-cv.png",
                 width: 128,
                 height: 133,
                 alt: "Logo light",
             },
             {
-                url: "https://www.totallynotisla.my.id/assets/og-cv-dark",
+                url: "https://www.totallynotisla.my.id/assets/og-cv-dark.png",
                 width: 128,
                 height: 133,
                 alt: "Logo dark",

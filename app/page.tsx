@@ -27,7 +27,7 @@ export default function Home() {
 
                 <div className="container flex items-center justify-between phone:justify-start phone:pt-6 gap-12 h-full phone:flex-col-reverse">
                     <div className="w-1/2 tablet:max-w-[30rem] phone:w-full relative">
-                        <Image data-aos="fade-up" src={HeroImage} alt="Hero" className="h-auto" />
+                        <Image data-aos="fade-up" src={HeroImage} alt="Hero" className="h-auto" title="profile" />
 
                         <Card data-aos="fade-up" data-aos-delay="500" className="absolute shadow-lg p-4 right-12 top-1/3 text-white bg-blue-800 border-none rounded-sm">
                             <div className="font-bold text-2xl tablet:text-base">2+ Years</div>
@@ -46,7 +46,8 @@ export default function Home() {
                             <br />I am a <span className="text-primary">Developer</span>
                         </h1>
                         <p className="text-lg tablet:text-base">
-                            My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed your expectations.
+                            My job is to transform your ideas into reality through the power of code, crafting efficient, scalable, and innovative solutions that bring your vision to life and exceed
+                            your expectations.
                         </p>
                         <Button className="mr-auto">
                             <Link href="#contact">Contact Me</Link>
@@ -62,8 +63,8 @@ export default function Home() {
                             About Myself
                         </h2>
                         <p data-aos="fade-up" className="opacity-75">
-                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer science and software engineering
-                            principles, which allows me to design and develop scalable and maintainable software solutions.
+                            I am a Fullstack Developer with 4+ years of experience in developing web applications, mobile applications, and backend services. I have a strong foundation in computer
+                            science and software engineering principles, which allows me to design and develop scalable and maintainable software solutions.
                         </p>
                         <Button data-aos="fade-up" className="mr-auto mt-4">
                             <Link href="https://www.linkedin.com/in/komang-adi-wirawan-b844802b5/">Hire me</Link>
@@ -91,7 +92,7 @@ export default function Home() {
                                 <Palette className="text-white size-6" />
                             </div>
                             <div className="flex flex-col">
-                                <h2 className="text-2xl font-bold">Developer</h2>
+                                <h3 className="text-2xl font-bold">Developer</h3>
                                 <p className="text-sm mt-1 opacity-65">I create dynamic web applications using React, Next.js, and Node.js, building full-featured applications from scratch.</p>
                             </div>
                         </Card>
@@ -101,7 +102,7 @@ export default function Home() {
                                 <Paintbrush className="text-white size-6" />
                             </div>
                             <div className="flex flex-col">
-                                <h2 className="text-2xl font-bold">Design</h2>
+                                <h3 className="text-2xl font-bold">Design</h3>
                                 <p className="text-sm mt-1 opacity-65">I craft visually appealing and user-friendly interfaces, ensuring a seamless user experience.</p>
                             </div>
                         </Card>
@@ -111,7 +112,7 @@ export default function Home() {
                                 <Cog className="text-white size-6" />
                             </div>
                             <div className="flex flex-col">
-                                <h2 className="text-2xl font-bold">Algorithm</h2>
+                                <h3 className="text-2xl font-bold">Algorithm</h3>
                                 <p className="text-sm mt-1 opacity-65">I excel in problem-solving and algorithm design, optimizing code for performance and efficiency.</p>
                             </div>
                         </Card>
