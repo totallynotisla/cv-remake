@@ -7,10 +7,36 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
     title: "My Portfolio - Adi",
+    metadataBase: new URL(`https://www.totallynotisla.my.id`),
     description: "Welcome to Adi's portfolio. Explore my projects, skills, and experience.",
-    keywords: ["Adi", "mangadi3859", "portfolio", "developer", "projects", "skills", "experience"],
-    authors: [{ name: "mangadi3859", url: "https://github.com/totallynotisla" }],
+    keywords: ["Adi", "totallynotisla", "portfolio", "developer", "projects", "skills", "experience"],
+    authors: [{ name: "totallynotisla", url: "https://github.com/totallynotisla" }],
     robots: "index, follow",
+    alternates: {
+        canonical: "./",
+    },
+    openGraph: {
+        emails: "wkomangadi44@gmail.com",
+        title: "totallynotisla",
+        type: "profile",
+        siteName: "TotallyNotIsla",
+        description: "Welcome to Adi's portfolio. Explore my projects, skills, and experience.",
+        url: "https://www.totallynotisla.my.id/",
+        images: [
+            {
+                url: "https://www.totallynotisla.my.id/assets/og-cv",
+                width: 512,
+                height: 530,
+                alt: "Logo light",
+            },
+            {
+                url: "https://www.totallynotisla.my.id/assets/og-cv-dark",
+                width: 512,
+                height: 530,
+                alt: "Logo dark",
+            },
+        ],
+    },
     icons: ["/assets/logo-cv.svg"],
 };
 

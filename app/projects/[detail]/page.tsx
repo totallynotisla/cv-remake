@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const ProjectDetail = ({ params }: { params: { detail: string } }) => {
+    console.log(params);
     const { detail } = params;
     const data = Data.find((project) => project.detailHref === detail);
     if (!data) redirect("/projects");

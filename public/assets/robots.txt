@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://totallynotisla.my.id/api/sitemap
