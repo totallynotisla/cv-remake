@@ -26,7 +26,7 @@ jobs:
             - name: Run build
               run: npm run build
             - name: Store SSH key
-              run: echo "${{ secrets.STAGING_SSH_KEY }}" > ${{ env.SSH_KEY_FILE_NAME }}
+              run: echo "${{ secrets.PROD_SSH_KEY }}" > ${{ env.SSH_KEY_FILE_NAME }}
             - name: Change SSH key permission
               run: chmod 444 ${{ env.SSH_KEY_FILE_NAME }}
 
