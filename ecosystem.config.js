@@ -4,7 +4,7 @@ module.exports = {
             name: "portfolio@prod",
             script: "npx next start",
             env: {
-                PORT: 3001,
+                PORT: 3003,
             },
         },
     ],
