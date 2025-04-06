@@ -57,10 +57,10 @@ jobs:
                   port: ${{ secrets.STAGING_SSH_PORT }}
                   script: |
                       cd /home/${{ secrets.STAGING_SSH_USERNAME }}/${{ env.APP_DIR }}
-                      mkdir -p nginx ssl
+                      mkdir -p nginx/conf.d ssl
                       echo "${{ secrets.STAGING_ENV_VARS }}" > .env
-                      echo "${{ vars.STAGING_NGINX_CONFIG }}" > nginx/default.conf
+                      echo "${{ vars.STAGING_NGINX_CONFIG }}" > nginx/conf.d/default.conf
                       echo "${{ secrets.STAGING_SSL_KEY }}" > ssl/ssl.key
                       echo "${{ secrets.STAGING_SSL_CERT }}" > ssl/ssl.cert
-                      echo APP_IMAGE="${{ env.APP_IMAGE }}" > .env.docker
-                      docker compose -f ${{env.COMPOSE_FILE}} up -d --pull always
+                      cp ./${{env.COMPOSE_FILE}} ./docker-compose.yaml
+                      APP_IMAGE=${{env.APP_IMAGE}} docker compose up -d --pull
