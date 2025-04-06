@@ -63,4 +63,7 @@ jobs:
                       echo "${{ secrets.STAGING_SSL_KEY }}" > ssl/ssl.key
                       echo "${{ secrets.STAGING_SSL_CERT }}" > ssl/ssl.cert
                       cp ./${{env.COMPOSE_FILE}} ./docker-compose.yaml
-                      APP_IMAGE=${{env.APP_IMAGE}} docker compose up -d --pull
+                      docker login docker.io -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+                      docker pull ${{env.APP_IMAGE}}
+                      APP_IMAGE=${{env.APP_IMAGE}} COMPOSE_BAKE=true docker-compose up -d
+                      docker logout docker.io
