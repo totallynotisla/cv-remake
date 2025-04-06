@@ -2,9 +2,9 @@ FROM nginx:latest AS nginx
 
 RUN rm /etc/nginx/conf.d/default.conf
 
-COPY ../nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY ../ssl/ssl.cert /etc/ssl/ssl.cert
-COPY ../ssl/ssl.key /etc/ssl/ssl.key
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ssl/ssl.cert /etc/ssl/ssl.cert
+COPY ssl/ssl.key /etc/ssl/ssl.key
 
 VOLUME /etc/nginx
 VOLUME /etc/ssl

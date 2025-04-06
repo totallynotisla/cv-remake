@@ -8,7 +8,9 @@ services:
         restart: "unless-stopped"
 
     nginx:
-        build: docker/Dockerfile.nginx
+        build: 
+          context: .
+          dockerfile: docker/Dockerfile.nginx
         container_name: nginx-proxy
         volumes:
         - ./nginx/log:/var/log/nginx
