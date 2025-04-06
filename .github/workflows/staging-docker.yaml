@@ -65,5 +65,5 @@ jobs:
                       cp ./${{env.COMPOSE_FILE}} ./docker-compose.yaml
                       echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login docker.io -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
                       docker pull ${{env.APP_IMAGE}}
-                      APP_IMAGE=${{env.APP_IMAGE}} COMPOSE_BAKE=true docker-compose up -d
+                      APP_IMAGE=${{env.APP_IMAGE}} COMPOSE_BAKE=true docker-compose up -d --force-recreate
                       docker logout docker.io
