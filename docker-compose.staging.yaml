@@ -2,12 +2,11 @@
 services:
     web:
         container_name: "portfolio-staging"
-        build: ${APP_IMAGE}
+        image: ${APP_IMAGE}
         ports:
             - "4000:3000"
         env_file:
             - .env
-            - .env.docker
         restart: "unless-stopped"
 
     nginx:
