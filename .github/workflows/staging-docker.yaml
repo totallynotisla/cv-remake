@@ -57,9 +57,9 @@ jobs:
                   port: ${{ secrets.STAGING_SSH_PORT }}
                   script: |
                       cd /home/${{ secrets.STAGING_SSH_USERNAME }}/${{ env.APP_DIR }}
-                      mkdir -p nginx/conf.d ssl
+                      mkdir -p nginx ssl
                       echo "${{ secrets.STAGING_ENV_VARS }}" > .env
-                      echo "${{ vars.STAGING_NGINX_CONFIG }}" > nginx/conf.d/default.conf
+                      echo "${{ vars.STAGING_NGINX_CONFIG }}" > nginx/default.conf
                       echo "${{ secrets.STAGING_SSL_KEY }}" > ssl/ssl.key
                       echo "${{ secrets.STAGING_SSL_CERT }}" > ssl/ssl.cert
                       cp ./${{env.COMPOSE_FILE}} ./docker-compose.yaml

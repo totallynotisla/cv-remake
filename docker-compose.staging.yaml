@@ -3,18 +3,14 @@ services:
     web:
         container_name: "portfolio-staging"
         image: ${APP_IMAGE}
-        ports:
-            - "4000:3000"
         env_file:
             - .env
         restart: "unless-stopped"
 
     nginx:
-        image: nginx:latest
+        build: docker/Dockerfile.nginx
         container_name: nginx-proxy
         volumes:
-        - ./nginx/conf.d:/etc/nginx/conf.d/
-        - ./ssl:/etc/ssl
         - ./nginx/log:/var/log/nginx
         ports:
         - "8000:80"
