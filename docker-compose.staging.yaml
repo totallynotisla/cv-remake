@@ -16,6 +16,6 @@ services:
         - ./nginx/log:/var/log/nginx
         ports:
         - "8000:80"
-        depends_on:
-        - web
+        # depends_on:
+        # - web
         restart: unless-stopped
