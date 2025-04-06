@@ -18,8 +18,7 @@ COPY --from=builder /app/node_modules node_modules
 COPY --from=builder /app/public public
 COPY --from=builder /app/.next .next
 
-ENV PORT=3001
+ENV PORT=3000
 
-EXPOSE 3001
-
+EXPOSE 3000
 CMD ["npx", "next", "start"]

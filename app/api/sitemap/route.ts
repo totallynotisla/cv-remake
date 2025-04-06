@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 const BASE_URL = "https://totallynotisla.my.id";
 
 export async function GET() {
-    // Replace this with your actual project URLs (e.g., from a database)
     const dynamicUrls = Data.map((e) => `/projects/${e.detailHref}`);
 
     const staticUrls = ["/", "/projects"];
