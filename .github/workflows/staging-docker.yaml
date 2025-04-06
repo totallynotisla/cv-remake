@@ -35,7 +35,7 @@ jobs:
                 username: ${{ secrets.STAGING_SSH_USERNAME }}
                 port: ${{ secrets.STAGING_SSH_PORT }}
                 key_path: ${{ env.SSH_KEY_FILE_NAME }}
-                source: "./${{env.COMPOSE_FILE}}"
+                source: "./${{env.COMPOSE_FILE}},./docker"
                 target: "/home/${{ secrets.STAGING_SSH_USERNAME }}/${{ env.APP_DIR }}"
 
             - name: Log in to Docker Hub
