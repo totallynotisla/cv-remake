@@ -1,0 +1,26 @@
+# version: "3"
+services:
+    web:
+        container_name: "portfolio-staging"
+        build: ${APP_IMAGE}
+        ports:
+            - "4000:3000"
+        env_file:
+            - .env
+            - .env.docker
+        restart: "unless-stopped"
+
+    nginx:
+        image: nginx:latest
+        container_name: nginx-proxy
+        volumes:
+        - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        - ./ssl/ssl.key:/etc/ssl/ssl.key
+        - ./ssl/ssl.pem:/etc/ssl/ssl.pem
+        - ./nginx/app.log:/var/log/nginx/app.log
+        - ./nginx/app.error.log:/var/log/nginx/app.error.log
+        ports:
+        - "80:80"
+        depends_on:
+        - web
+        restart: unless-stopped
